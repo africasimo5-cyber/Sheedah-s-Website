@@ -11,6 +11,13 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        gold: "#C9A96E",
+        black: "#0A0A0A",
+        cream: "#FAF7F2",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)"],
+        heading: ["var(--font-cormorant)"],
       },
     },
   },
