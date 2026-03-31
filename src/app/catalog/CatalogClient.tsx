@@ -9,18 +9,18 @@ const allLengths = ["10\"", "12\"", "14\"", "16\"", "18\"", "20\"", "22\"", "24\
 const shortLengths = ["10\"", "12\"", "14\"", "16\"", "18\"", "20\""];
 
 const products = [
-  { id: 1, name: "Brazilian Straight", category: "Straight", image: "https://placehold.co/400x500/1a1a1a/2a2a2a?text=Brazilian+Straight", lengths: allLengths },
-  { id: 2, name: "Peruvian Straight", category: "Straight", image: "https://placehold.co/400x500/2a2a2a/3a3a3a?text=Peruvian+Straight", lengths: allLengths },
-  { id: 3, name: "Brazilian Body Wave", category: "Body Wave", image: "https://placehold.co/400x500/3a3a3a/4a4a4a?text=Brazilian+Body+Wave", lengths: allLengths },
-  { id: 4, name: "Malaysian Body Wave", category: "Body Wave", image: "https://placehold.co/400x500/4a4a4a/5a5a5a?text=Malaysian+Body+Wave", lengths: allLengths },
-  { id: 5, name: "Brazilian Deep Wave", category: "Deep Wave", image: "https://placehold.co/400x500/5a5a5a/6a6a6a?text=Brazilian+Deep+Wave", lengths: allLengths },
-  { id: 6, name: "Indian Deep Wave", category: "Deep Wave", image: "https://placehold.co/400x500/6a6a6a/7a7a7a?text=Indian+Deep+Wave", lengths: allLengths },
-  { id: 7, name: "Brazilian Curly", category: "Curly", image: "https://placehold.co/400x500/7a7a7a/8a8a8a?text=Brazilian+Curly", lengths: allLengths },
-  { id: 8, name: "Kinky Curly", category: "Curly", image: "https://placehold.co/400x500/8a8a8a/9a9a9a?text=Kinky+Curly", lengths: allLengths },
-  { id: 9, name: "Afro Kinky", category: "Kinky", image: "https://placehold.co/400x500/9a9a9a/aaaaaa?text=Afro+Kinky", lengths: allLengths },
-  { id: 10, name: "Kinky Straight", category: "Kinky", image: "https://placehold.co/400x500/aaaaaa/bbbbbb?text=Kinky+Straight", lengths: allLengths },
-  { id: 11, name: "HD Lace Frontal", category: "Closure & Frontals", image: "https://placehold.co/400x500/bbbbbb/cccccc?text=HD+Frontal", lengths: shortLengths },
-  { id: 12, name: "4x4 Lace Closure", category: "Closure & Frontals", image: "https://placehold.co/400x500/cccccc/dddddd?text=4x4+Closure", lengths: shortLengths },
+  { id: 1, name: "Brazilian Straight", category: "Straight", image: "/wigs/straight-hair-1.jpg", lengths: allLengths },
+  { id: 2, name: "Peruvian Straight", category: "Straight", image: "/wigs/straight-hair-2.jpg", lengths: allLengths },
+  { id: 3, name: "Brazilian Body Wave", category: "Body Wave", image: "/wigs/body-wave-1.jpg", lengths: allLengths },
+  { id: 4, name: "Malaysian Body Wave", category: "Body Wave", image: "/wigs/body-wave-2.jpg", lengths: allLengths },
+  { id: 5, name: "Brazilian Deep Wave", category: "Deep Wave", image: "/wigs/body-wave-3.jpg", lengths: allLengths },
+  { id: 6, name: "Indian Deep Wave", category: "Deep Wave", image: "/wigs/straight-hair-3.jpg", lengths: allLengths },
+  { id: 7, name: "Brazilian Curly", category: "Curly", image: "/wigs/curly-hair-1.jpg", lengths: allLengths },
+  { id: 8, name: "Kinky Curly", category: "Curly", image: "/wigs/curly-hair-2.jpg", lengths: allLengths },
+  { id: 9, name: "Afro Kinky", category: "Kinky", image: "/wigs/curly-hair-3.jpg", lengths: allLengths },
+  { id: 10, name: "Kinky Straight", category: "Kinky", image: "/wigs/straight-hair-4.jpg", lengths: allLengths },
+  { id: 11, name: "HD Lace Frontal", category: "Closure & Frontals", image: "https://placehold.co/400x500/1a1a1a/2aADA8?text=HD+Frontal", lengths: shortLengths },
+  { id: 12, name: "4x4 Lace Closure", category: "Closure & Frontals", image: "https://placehold.co/400x500/1a1a1a/f0197d?text=4x4+Closure", lengths: shortLengths },
 ];
 
 export default function Catalog() {
@@ -38,14 +38,14 @@ export default function Catalog() {
     : products.filter((product) => product.category === activeFilter);
 
   return (
-    <div className="bg-cream min-h-screen pb-32">
+    <div className="bg-white min-h-screen pb-32">
       {/* Header */}
-      <section className="bg-black pt-28 pb-16 px-4 text-center border-b border-gold/20">
+      <section className="bg-dark pt-28 pb-16 px-4 text-center border-b border-primary/20">
         <motion.h1 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-heading font-bold text-gold mb-4"
+          className="text-5xl md:text-7xl font-heading font-bold text-primary mb-4"
         >
           Our Hair Collection
         </motion.h1>
@@ -53,14 +53,14 @@ export default function Catalog() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-cream/80 font-sans text-lg md:text-xl max-w-2xl mx-auto"
+          className="text-white/80 font-sans text-lg md:text-xl max-w-2xl mx-auto"
         >
           Premium quality hair in every texture and length. Find your perfect match.
         </motion.p>
       </section>
 
       {/* Filter Bar */}
-      <section className="sticky top-20 z-40 bg-cream/95 backdrop-blur-md border-b border-gold/20 mb-12 shadow-sm">
+      <section className="sticky top-20 z-40 bg-white/95 backdrop-blur-md border-b border-primary/20 mb-12 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex overflow-x-auto [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none] py-6 gap-3 items-center whitespace-nowrap">
             {categories.map((cat, index) => (
@@ -69,8 +69,8 @@ export default function Catalog() {
                 onClick={() => setActiveFilter(cat)}
                 className={`px-6 py-2.5 rounded-full border transition-all duration-300 uppercase tracking-widest text-xs font-bold font-sans ${
                   activeFilter === cat
-                    ? "bg-gold border-gold text-black shadow-md scale-105"
-                    : "bg-transparent border-gold/40 text-black/70 hover:border-gold hover:text-gold"
+                    ? "bg-primary border-primary text-white shadow-md scale-105"
+                    : "bg-white border-primary/40 text-dark/70 hover:border-primary hover:text-primary"
                 }`}
               >
                 {cat}
@@ -93,7 +93,7 @@ export default function Catalog() {
                   animate={{ opacity: 1 }}
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.3 }}
-                  className="w-full h-full bg-gold/10 animate-pulse rounded-xl aspect-[4/5] min-h-[400px]"
+                  className="w-full h-full bg-primary/10 animate-pulse rounded-xl aspect-[4/5] min-h-[400px]"
                 />
               ))
             ) : (
@@ -121,7 +121,7 @@ export default function Catalog() {
 
         {filteredProducts.length === 0 && (
           <div className="w-full py-20 text-center">
-            <p className="text-black/50 font-sans text-lg italic">
+            <p className="text-dark/50 font-sans text-lg italic">
               No products found in this category.
             </p>
           </div>

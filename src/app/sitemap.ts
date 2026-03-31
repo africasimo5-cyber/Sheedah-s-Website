@@ -2,7 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   // Replace with the actual production domain
-  const baseUrl = 'https://sheedahsbeautyworld.com'; 
+  //const baseUrl = 'https://sheedahsbeautyworld.com'; 
+  const baseUrl = 'https://sheedah-s-website.vercel.app';
 
   return [
     {

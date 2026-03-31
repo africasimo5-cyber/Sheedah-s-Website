@@ -11,9 +11,11 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        gold: "#C9A96E",
-        black: "#0A0A0A",
-        cream: "#FAF7F2",
+        primary: "#2AADA8",
+        secondary: "#F0197D",
+        white: "#FFFFFF",
+        dark: "#1A1A1A",
+        lightbg: "#F4FCFC",
       },
       fontFamily: {
         sans: ["var(--font-inter)"],

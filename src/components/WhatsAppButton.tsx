@@ -15,7 +15,7 @@ export default function WhatsAppButton() {
             initial={{ opacity: 0, x: 10 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: 10 }}
-            className="mr-3 bg-black/80 backdrop-blur-sm text-cream text-xs font-medium py-2 px-3 rounded-lg shadow-lg"
+            className="mr-3 bg-dark/90 backdrop-blur-sm text-white text-xs font-medium py-2 px-3 rounded-lg shadow-lg"
           >
             Chat with us
           </motion.div>

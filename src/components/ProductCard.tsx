@@ -12,14 +12,14 @@ export default function ProductCard({ name, category, image, lengths }: ProductC
   const whatsappUrl = `https://wa.me/2347030599735?text=${encodeURIComponent(whatsappMsg)}`;
 
   return (
-    <div className="bg-white border border-gold/15 rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group h-full">
+    <div className="bg-white border border-dark/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-t-[3px] hover:border-t-primary transition-all duration-300 flex flex-col group h-full">
       {/* Product Image */}
-      <div className="relative aspect-[4/5] bg-cream overflow-hidden">
+      <div className="relative aspect-[4/5] bg-lightbg overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
           style={{ backgroundImage: `url('${image}')` }}
         />
-        <div className="absolute top-4 left-4 bg-black/80 backdrop-blur-sm text-cream text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm">
+        <div className="absolute top-4 left-4 bg-secondary text-white text-[10px] font-bold uppercase tracking-widest px-3 py-1.5 rounded-sm">
           {category}
         </div>
       </div>
@@ -34,7 +34,7 @@ export default function ProductCard({ name, category, image, lengths }: ProductC
             {lengths.map((len, idx) => (
               <span 
                 key={idx}
-                className="text-xs font-sans font-medium px-2 py-1 bg-cream text-black/80 rounded-sm border border-gold/20"
+                className="text-xs font-sans font-medium px-2 py-1 bg-primary/15 text-primary rounded-sm border border-primary/20"
               >
                 {len}
               </span>
@@ -46,7 +46,7 @@ export default function ProductCard({ name, category, image, lengths }: ProductC
           href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-transparent border-2 border-[#25D366] text-[#25D366] font-semibold tracking-wide uppercase text-sm rounded-sm hover:bg-[#25D366] hover:text-white transition-all cursor-pointer"
+          className="w-full flex items-center justify-center gap-2 px-6 py-4 bg-secondary text-white font-semibold tracking-wide uppercase text-sm rounded-sm hover:bg-[#c9126a] transition-all cursor-pointer shadow-md"
         >
           <MessageCircle size={18} />
           <span>Order via WhatsApp</span>
