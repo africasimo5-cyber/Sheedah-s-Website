@@ -3,13 +3,21 @@ import { MessageCircle } from "lucide-react";
 interface ProductCardProps {
   name: string;
   category: string;
-  image: string;
+  image_url: string | null;
   lengths: string[];
+  price: string | null;
 }
 
-export default function ProductCard({ name, category, image, lengths }: ProductCardProps) {
-  const whatsappMsg = `Hi Sheedah, I'm interested in ${name}. Can you send me pricing?`;
+export default function ProductCard({
+  name,
+  category,
+  image_url,
+  lengths,
+  price,
+}: ProductCardProps) {
+  const whatsappMsg = `Hi Sheedah, I'm interested in ${name}. Can you send me the price?`;
   const whatsappUrl = `https://wa.me/2347030599735?text=${encodeURIComponent(whatsappMsg)}`;
+  const image = image_url || "/logo.jpg";
 
   return (
     <div className="bg-white border border-dark/10 rounded-xl overflow-hidden shadow-sm hover:shadow-xl hover:border-t-[3px] hover:border-t-primary transition-all duration-300 flex flex-col group h-full">
@@ -27,8 +35,11 @@ export default function ProductCard({ name, category, image, lengths }: ProductC
       {/* Product Details */}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-2xl font-heading font-bold text-black mb-3">{name}</h3>
-        
+
         <div className="mb-6 flex-grow">
+          <p className="text-sm font-bold text-dark mb-3">
+            {price || "Contact for price"}
+          </p>
           <p className="text-xs uppercase tracking-wider text-black/60 font-semibold mb-2">Available Lengths</p>
           <div className="flex flex-wrap gap-2">
             {lengths.map((len, idx) => (

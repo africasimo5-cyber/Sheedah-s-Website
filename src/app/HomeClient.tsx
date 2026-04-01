@@ -4,7 +4,22 @@ import Link from "next/link";
 import { motion, Variants } from "framer-motion";
 import { Globe, DollarSign, Sparkles, MessageSquare, Star } from "lucide-react";
 
-export default function Home() {
+type HomeCategory = {
+  name: string;
+  image: string;
+};
+
+type Testimonial = {
+  text: string;
+  author: string;
+};
+
+type HomeClientProps = {
+  categories: HomeCategory[];
+  testimonials: Testimonial[];
+};
+
+export default function Home({ categories, testimonials }: HomeClientProps) {
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     show: {
@@ -41,30 +56,6 @@ export default function Home() {
       title: "Fast Response",
       description: "Quick replies via WhatsApp & Instagram",
     },
-  ];
-
-  const categories = [
-    { name: "Straight", image: "/wigs/straight-hair-1.jpg" },
-    { name: "Body Wave", image: "/wigs/body-wave-1.jpg" },
-    { name: "Deep Wave", image: "/wigs/body-wave-3.jpg" },
-    { name: "Curly", image: "/wigs/curly-hair-1.jpg" },
-    { name: "Kinky", image: "/wigs/curly-hair-3.jpg" },
-    { name: "Closure & Frontals", image: "/wigs/straight-hair-4.jpg" },
-  ];
-
-  const testimonials = [
-    {
-      text: "Sheedah's hair is absolutely premium. I've been a loyal customer for 2 years!",
-      author: "Amaka T., Abuja"
-    },
-    {
-      text: "Best wholesale supplier in Lagos. Fast delivery and great prices every time.",
-      author: "Beauty by Zara, Port Harcourt"
-    },
-    {
-      text: "I ordered from the UK and got my package in 5 days. Incredible service!",
-      author: "Titi M., London"
-    }
   ];
 
   const instagramPosts = [
